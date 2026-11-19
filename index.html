@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Ekspansi & Pendampingan Prioritas — Sistem Manajemen Rumah Kos</title>
+    <meta name="description" content="Kembangkan bisnis kos lebih cepat dengan sistem multi-cabang, custom branding, migrasi data Done-For-You, dan dukungan prioritas eksklusif.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        navy: {
+                            800: '#0f172a',
+                            900: '#0a0f1d',
+                            950: '#05070f',
+                        },
+                        accent: {
+                            purple: '#8b5cf6',
+                            amber: '#f59e0b',
+                            cyan: '#06b6d4',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'shine': 'shine 2s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        shine: {
+                            '0%': { backgroundPosition: '200% 0' },
+                            '100%': { backgroundPosition: '-200% 0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Canvas Confetti for conversion delight -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        /* Custom scrollbar and glassmorphism styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0f1d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-panel-glow {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            box-shadow: 0 0 35px -5px rgba(34, 197, 94, 0.15);
+        }
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(60deg, #16a34a, #06b6d4, #8b5cf6, #16a34a);
+            background-size: 300% 300%;
+            animation: gradientMove 6s ease infinite;
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .text-glow {
+            text-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-emerald-950 via-brand-900 to-teal-950 border-b border-brand-500/30 text-xs sm:text-sm py-2.5 px-4 text-center text-emerald-200 flex items-center justify-center gap-2 relative z-50">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-brand-500/20 text-brand-300 border border-brand-500/30 animate-pulse">
+            LIMITED EXPANSION PASS
+        </span>
+        <span class="font-medium hidden sm:inline">Khusus Pemilik & Pengelola Multi-Kos:</span>
+        <span>Upgrade Prioritas & Migrasi Done-For-You hanya</span>
+        <span class="font-extrabold text-white bg-brand-600 px-2 py-0.5 rounded shadow-sm">Rp 99.000</span>
+        <a href="#penawaran" class="underline ml-1 font-semibold hover:text-white transition-colors">Ambil Akses &rarr;</a>
+    </div>
+
+    <!-- Background Ambient Glows -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] overflow-hidden pointer-events-none -z-10">
+        <div class="absolute top-[-150px] left-1/4 w-[500px] h-[500px] bg-brand-500/15 rounded-full blur-[140px]"></div>
+        <div class="absolute top-[100px] right-1/4 w-[450px] h-[450px] bg-accent-cyan/10 rounded-full blur-[150px]"></div>
+        <div class="absolute top-[400px] left-1/3 w-[600px] h-[300px] bg-accent-purple/10 rounded-full blur-[160px]"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="sticky top-0 z-40 glass-panel border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
+                    <i data-lucide="building-2" class="w-6 h-6 text-navy-950 font-bold"></i>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="font-display font-bold text-xl tracking-tight text-white">SIMKos</span>
+                        <span class="text-xs font-semibold px-2 py-0.5 rounded bg-brand-500/20 text-brand-400 border border-brand-500/30">PRIORITAS</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 font-medium">Multi-Branch & Executive Scale</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#fitur" class="hover:text-brand-400 transition-colors">5 Layanan Unggulan</a>
+                <a href="#perbandingan" class="hover:text-brand-400 transition-colors">Sebelum vs Sesudah</a>
+                <a href="#branding-demo" class="hover:text-brand-400 transition-colors">Preview Custom Brand</a>
+                <a href="#kalkulator" class="hover:text-brand-400 transition-colors">Simulasi ROI</a>
+                <a href="#faq" class="hover:text-brand-400 transition-colors">FAQ</a>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/?text=Halo%20tim%20SIMKos%2C%20saya%20ingin%20tanya%20mengenai%20Paket%20Ekspansi%20%26%20Pendampingan%20Prioritas." target="_blank" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-lg border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                    Konsultasi VIP
+                </a>
+                <button onclick="openCheckoutModal()" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-xl group bg-gradient-to-br from-brand-500 to-teal-400 group-hover:from-brand-600 group-hover:to-teal-500 hover:shadow-lg hover:shadow-brand-500/25 transition-all duration-300">
+                    <span class="relative px-5 py-2.5 transition-all ease-in duration-200 bg-navy-950 rounded-[10px] group-hover:bg-opacity-0 flex items-center gap-2 text-white">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-brand-400 group-hover:text-white"></i>
+                        <span>Upgrade Sekarang</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <!-- Pill Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-brand-500/30 text-xs sm:text-sm font-medium text-brand-300 mb-6 shadow-inner">
+                    <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
+                    <span>Penawaran Khusus Pemilik & Pengelola Multi-Cabang</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15] mb-6">
+                    Kembangkan Bisnis Kos Lebih Cepat dengan <span class="bg-gradient-to-r from-brand-400 via-teal-300 to-emerald-200 bg-clip-text text-transparent text-glow">Layanan Ekspansi & Pendampingan Prioritas</span>
+                </h1>
+
+                <!-- Sub-Headline -->
+                <p class="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed mb-8 font-normal">
+                    Kelola banyak cabang dalam satu komando, tampil prestisius dengan identitas merek kos Anda sendiri, dan delegasikan migrasi data serta training staf ke tim ahli kami.
+                </p>
+
+                <!-- Value Proposition Highlights -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-left mb-10 max-w-3xl mx-auto">
+                    <div class="p-3 rounded-xl bg-slate-900/50 border border-slate-800 flex items-center gap-2.5">
+                        <i data-lucide="network" class="w-5 h-5 text-brand-400 flex-shrink-0"></i>
+                        <span class="text-xs font-semibold text-slate-200 leading-tight">Multi-Cabang Terpusat</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-900/50 border border-slate-800 flex items-center gap-2.5">
+                        <i data-lucide="palette" class="w-5 h-5 text-accent-cyan flex-shrink-0"></i>
+                        <span class="text-xs font-semibold text-slate-200 leading-tight">Custom Branding & Logo</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-900/50 border border-slate-800 flex items-center gap-2.5">
+                        <i data-lucide="user-check" class="w-5 h-5 text-accent-purple flex-shrink-0"></i>
+                        <span class="text-xs font-semibold text-slate-200 leading-tight">Training Staf Done-For-You</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-900/50 border border-slate-800 flex items-center gap-2.5">
+                        <i data-lucide="zap" class="w-5 h-5 text-accent-amber flex-shrink-0"></i>
+                        <span class="text-xs font-semibold text-slate-200 leading-tight">VIP Fast-Lane Support</span>
+                    </div>
+                </div>
+
+                <!-- Action CTA Group -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+                    <button onclick="openCheckoutModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-emerald-500 hover:from-brand-500 hover:to-emerald-400 text-navy-950 font-bold text-base shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 group">
+                        <span>Upgrade ke Paket Prioritas — Rp 99.000</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                    <a href="#fitur" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-base transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="play-circle" class="w-5 h-5 text-slate-400"></i>
+                        <span>Pelajari Fitur Lengkap</span>
+                    </a>
+                </div>
+
+                <!-- Guarantee Micro-copy -->
+                <div class="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-slate-400">
+                    <span class="flex items-center gap-1.5">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                        Garansi 30 Hari Uang Kembali
+                    </span>
+                    <span class="flex items-center gap-1.5">
+                        <i data-lucide="lock" class="w-4 h-4 text-emerald-400"></i>
+                        Data Terisolasi & Aman Per Cabang
+                    </span>
+                    <span class="flex items-center gap-1.5">
+                        <i data-lucide="clock" class="w-4 h-4 text-emerald-400"></i>
+                        Aktivasi & Onboarding 1x24 Jam
+                    </span>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE DASHBOARD PREVIEW MOCKUP -->
+            <div class="mt-14 relative max-w-5xl mx-auto">
+                <!-- Floating decorative badges -->
+                <div class="hidden md:flex absolute -top-6 -left-6 z-20 items-center gap-3 p-3.5 rounded-2xl glass-panel shadow-2xl border-emerald-500/30 animate-float">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                        <i data-lucide="check-check" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-400 font-medium">Auto WhatsApp Billing</div>
+                        <div class="text-sm font-bold text-white">48 Invoice Lunas Hari Ini</div>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex absolute -bottom-6 -right-6 z-20 items-center gap-3 p-3.5 rounded-2xl glass-panel shadow-2xl border-brand-500/30 animate-float-delayed">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center">
+                        <i data-lucide="trending-up" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-400 font-medium">Tingkat Okupansi 3 Cabang</div>
+                        <div class="text-sm font-bold text-emerald-400">98.4% (Optimal Penuh)</div>
+                    </div>
+                </div>
+
+                <!-- Window Frame -->
+                <div class="rounded-2xl p-1 bg-gradient-to-b from-slate-700 via-slate-800 to-slate-900 shadow-2xl shadow-emerald-950/50">
+                    <div class="rounded-[14px] bg-navy-900 border border-slate-800 overflow-hidden">
+                        <!-- Window Header -->
+                        <div class="px-4 py-3 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                                <span class="ml-2 text-xs font-mono text-slate-400 hidden sm:inline">simkos-prioritas.app/executive-control</span>
+                            </div>
+                            
+                            <!-- Interactive Branch Switcher in Mockup -->
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-slate-400 font-medium hidden md:inline">Mode Tampilan:</span>
+                                <div class="inline-flex rounded-lg bg-navy-950 p-1 border border-slate-800 text-xs">
+                                    <button id="btn-mock-all" onclick="switchMockupBranch('all')" class="px-2.5 py-1 rounded font-semibold bg-brand-600 text-white transition-all">Semua Cabang (Konsolidasian)</button>
+                                    <button id="btn-mock-bsd" onclick="switchMockupBranch('bsd')" class="px-2.5 py-1 rounded text-slate-400 hover:text-white transition-all">Cabang BSD</button>
+                                    <button id="btn-mock-dago" onclick="switchMockupBranch('dago')" class="px-2.5 py-1 rounded text-slate-400 hover:text-white transition-all">Cabang Bandung</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mockup Body Content -->
+                        <div class="p-4 sm:p-6 space-y-6">
+                            <!-- Executive Top Metrics -->
+                            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                                <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80">
+                                    <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                                        <span>Total Pendapatan (Bln Ini)</span>
+                                        <i data-lucide="wallet" class="w-4 h-4 text-emerald-400"></i>
+                                    </div>
+                                    <div id="mock-revenue" class="text-lg sm:text-2xl font-bold text-white">Rp 118.450.000</div>
+                                    <div class="text-[11px] text-emerald-400 mt-1 flex items-center gap-1">
+                                        <i data-lucide="arrow-up-right" class="w-3 h-3"></i> +14.2% dari bulan lalu
+                                    </div>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80">
+                                    <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                                        <span>Kamar Terisi / Total</span>
+                                        <i data-lucide="door-closed" class="w-4 h-4 text-brand-400"></i>
+                                    </div>
+                                    <div id="mock-occupancy" class="text-lg sm:text-2xl font-bold text-white">58 / 60 Kamar</div>
+                                    <div class="text-[11px] text-brand-300 mt-1 font-medium">96.7% Okupansi Rata-rata</div>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80">
+                                    <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                                        <span>Tunggakan Terpantau</span>
+                                        <i data-lucide="alert-circle" class="w-4 h-4 text-rose-400"></i>
+                                    </div>
+                                    <div id="mock-arrears" class="text-lg sm:text-2xl font-bold text-rose-400">Rp 1.850.000</div>
+                                    <div class="text-[11px] text-slate-400 mt-1">Hanya 1 kamar (Reminder WA terkirim)</div>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80">
+                                    <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                                        <span>Status Custom Brand</span>
+                                        <i data-lucide="badge-check" class="w-4 h-4 text-teal-400"></i>
+                                    </div>
+                                    <div class="text-base sm:text-lg font-bold text-teal-300">Active & Verified</div>
+                                    <div class="text-[11px] text-slate-400 mt-1">Portal Penghuni: 100% Whitelabel</div>
+                                </div>
+                            </div>
+
+                            <!-- Multi-Branch Table Preview & Activity -->
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                                <!-- Table of Branches -->
+                                <div class="lg:col-span-2 rounded-xl bg-slate-900/50 border border-slate-800 p-4">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                                            <i data-lucide="map-pin" class="w-4 h-4 text-brand-400"></i>
+                                            Ringkasan Konsolidasi Antar Cabang
+                                        </h3>
+                                        <span class="text-xs text-brand-400 bg-brand-500/10 px-2.5 py-1 rounded-full border border-brand-500/20">Live Sync</span>
+                                    </div>
+
+                                    <div class="overflow-x-auto">
+                                        <table class="w-full text-xs text-left">
+                                            <thead class="text-slate-400 border-b border-slate-800">
+                                                <tr>
+                                                    <th class="pb-2">Properti / Lokasi</th>
+                                                    <th class="pb-2">Kamar</th>
+                                                    <th class="pb-2">Omset Bulan Ini</th>
+                                                    <th class="pb-2">Penanggung Jawab</th>
+                                                    <th class="pb-2 text-right">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="divide-y divide-slate-800/50 text-slate-200">
+                                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                                    <td class="py-3 font-semibold flex items-center gap-2">
+                                                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                                        Cabang 1: BSD Eco-Residence
+                                                    </td>
+                                                    <td class="py-3">24 / 24 <span class="text-[10px] text-emerald-400 font-bold">(Penuh)</span></td>
+                                                    <td class="py-3 font-semibold text-white">Rp 52.800.000</td>
+                                                    <td class="py-3 text-slate-400">Pak Joko (Admin)</td>
+                                                    <td class="py-3 text-right"><span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300">Sehat</span></td>
+                                                </tr>
+                                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                                    <td class="py-3 font-semibold flex items-center gap-2">
+                                                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                                        Cabang 2: Dago Student Living
+                                                    </td>
+                                                    <td class="py-3">20 / 22 <span class="text-[10px] text-slate-400">(91%)</span></td>
+                                                    <td class="py-3 font-semibold text-white">Rp 38.650.000</td>
+                                                    <td class="py-3 text-slate-400">Bu Yanti (Penjaga)</td>
+                                                    <td class="py-3 text-right"><span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300">Sehat</span></td>
+                                                </tr>
+                                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                                    <td class="py-3 font-semibold flex items-center gap-2">
+                                                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                                        Cabang 3: Pogung Haven Jogja
+                                                    </td>
+                                                    <td class="py-3">14 / 14 <span class="text-[10px] text-emerald-400 font-bold">(Penuh)</span></td>
+                                                    <td class="py-3 font-semibold text-white">Rp 27.000.000</td>
+                                                    <td class="py-3 text-slate-400">Mas Agus (Supervisor)</td>
+                                                    <td class="py-3 text-right"><span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300">Sehat</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- Tenant Portal & Branding Mini Preview -->
+                                <div class="rounded-xl bg-slate-900/50 border border-slate-800 p-4 flex flex-col justify-between">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-3">
+                                            <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                                                <i data-lucide="smartphone" class="w-4 h-4 text-accent-cyan"></i>
+                                                Tampilan di HP Penghuni
+                                            </span>
+                                            <span class="text-[10px] text-slate-400">Whitelabel</span>
+                                        </div>
+                                        <div class="p-3 rounded-lg bg-navy-950 border border-slate-800 space-y-2.5">
+                                            <div class="flex items-center gap-2 border-b border-slate-800 pb-2">
+                                                <div id="mock-brand-badge" class="w-6 h-6 rounded bg-brand-500 flex items-center justify-center text-[10px] font-bold text-navy-950">RK</div>
+                                                <div class="truncate">
+                                                    <div id="mock-brand-name-header" class="text-xs font-bold text-white">Royal Kost Residence</div>
+                                                    <div class="text-[10px] text-slate-400">Portal Resmi Penyewa</div>
+                                                </div>
+                                            </div>
+                                            <div class="text-[11px] text-slate-300">
+                                                Kamar: <span class="font-bold text-white">A-12 (Executive)</span>
+                                            </div>
+                                            <div class="text-[11px] text-slate-300">
+                                                Jatuh Tempo: <span class="text-amber-400 font-semibold">28 November 2026</span>
+                                            </div>
+                                            <div class="p-2 rounded bg-slate-900 border border-emerald-500/30 flex items-center justify-between text-[11px]">
+                                                <span class="text-emerald-400 font-semibold">Kontrak Digital Aktif</span>
+                                                <i data-lucide="file-check-2" class="w-3.5 h-3.5 text-emerald-400"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+                                        <span class="text-slate-400">Didukung Tim Prioritas:</span>
+                                        <span class="text-brand-400 font-semibold flex items-center gap-1">
+                                            <i data-lucide="shield" class="w-3.5 h-3.5"></i> SLA &lt; 15 Mnt
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: THE DILEMMA / REALITY CHECK (Sebelum vs Sesudah) -->
+    <section id="perbandingan" class="py-20 bg-slate-950/60 border-t border-b border-slate-800/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">
+                    Realita Pertumbuhan Bisnis Kos
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-4 mb-4">
+                    Saat Kamar Bertambah & Cabang Dibuka, Cara Lama Mulai Menguras Waktu Anda
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Memiliki sistem operasional harian adalah awal yang baik. Namun mengeksekusi multi-cabang tanpa pendampingan sistematis sering berujung pada kekacauan administrasi dan hilangnya waktu berharga Anda.
+                </p>
+            </div>
+
+            <!-- Comparison Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- SEBELUM UPGRADE (Kiri - Merah/Abu) -->
+                <div class="rounded-2xl bg-slate-900/40 border border-rose-900/30 p-6 sm:p-8 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 rounded-bl-full pointer-events-none"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center font-bold">
+                            <i data-lucide="x-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Tanpa Paket Ekspansi & Prioritas</h3>
+                            <p class="text-xs text-rose-400/90 font-medium">Beban operasional & risiko human error tinggi</p>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="minus" class="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block font-medium">Data Cabang Terpisah & Fragmented</strong>
+                                Harus membuka file Excel berbeda atau gonta-ganti akun hanya untuk cek okupansi cabang lain.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="minus" class="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block font-medium">Brand Terlihat Generik</strong>
+                                Tagihan dan portal masih menggunakan format standar atau kertas manual, terkesan kurang profesional di hadapan penyewa kelas atas.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="minus" class="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block font-medium">Waktu Terbuang Melatih Staf Baru</strong>
+                                Pemilik kos harus berulang kali mengajari penjaga kos gaptek cara input data, follow-up, dan rekap manual.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="minus" class="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block font-medium">Antre Bantuan Customer Service</strong>
+                                Bila ada error atau perubahan mendesak di tengah malam, harus menunggu antrean tiket reguler berhari-hari.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SESUDAH UPGRADE (Kanan - Hijau/Emerald Glow) -->
+                <div class="rounded-2xl glass-panel-glow p-6 sm:p-8 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-bl-full pointer-events-none"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold">
+                            <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Dengan Paket Ekspansi & Pendampingan</h3>
+                            <p class="text-xs text-brand-400 font-medium">Otomatisasi multi-lokasi & delegasi tanpa cemas</p>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block font-medium">1 Akun Master Dashboard Eksekutif</strong>
+                                Pantau 2 hingga 20 cabang sekaligus dalam satu layar. Data per cabang tetap terisolasi aman dan rapi.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block font-medium">Custom Branding Eksklusif Kos Anda</strong>
+                                Portal sewa, WhatsApp reminder, dan bukti bayar digital membawa logo, warna, dan nama resmi kos Anda sendiri.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block font-medium">Migrasi & Training Staf "Done-For-You"</strong>
+                                Duduk manis! Tim kami yang menginput database lama dan melatih penjaga/admin kos Anda sampai siap pakai.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="text-white block font-medium">Jalur Khusus VIP WhatsApp Support</strong>
+                                Bantuan teknis prioritas berkecepatan tinggi kapan pun dibutuhkan untuk kelancaran operasional kos Anda.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: 5 LAYANAN UTAMA (Interactive Feature Showcase) -->
+    <section id="fitur" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                    Spesifikasi Layanan
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-4">
+                    Apa yang Anda Dapatkan dalam Paket Ekspansi & Prioritas Ini?
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    5 pilar solusi terintegrasi yang dirancang khusus untuk membebaskan waktu pemilik kos dan meningkatkan nilai sewa properti Anda.
+                </p>
+            </div>
+
+            <!-- 5 Pillar Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Fitur 1 -->
+                <div class="p-6 sm:p-7 rounded-2xl glass-panel hover:border-brand-500/40 hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-5 group-hover:bg-brand-500 group-hover:text-navy-950 transition-colors">
+                        <i data-lucide="network" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-brand-400">Pilar 01</span>
+                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Pengelolaan Multi-Cabang / Multi-Properti</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Kelola dan pantau beberapa lokasi rumah kos sekaligus dengan data per cabang yang tetap terpisah, aman, dan terstruktur. Hak akses staf per cabang dapat dibatasi sesuai tanggung jawabnya.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span>Pemisahan pembukuan & inventaris tiap lokasi</span>
+                    </div>
+                </div>
+
+                <!-- Fitur 2 -->
+                <div class="p-6 sm:p-7 rounded-2xl glass-panel hover:border-accent-cyan/40 hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-5 group-hover:bg-cyan-500 group-hover:text-navy-950 transition-colors">
+                        <i data-lucide="palette" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-400">Pilar 02</span>
+                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Kustomisasi Identitas (Custom Branding)</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Tampilkan nama, logo, serta identitas rumah kos Anda sendiri di portal penghuni, invoice WhatsApp, dan dokumen kontrak sewa digital agar terlihat lebih kredibel dan tepercaya.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span>Tingkatkan persepsi premium sewa kos</span>
+                    </div>
+                </div>
+
+                <!-- Fitur 3 -->
+                <div class="p-6 sm:p-7 rounded-2xl glass-panel hover:border-accent-purple/40 hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-5 group-hover:bg-purple-500 group-hover:text-navy-950 transition-colors">
+                        <i data-lucide="users-2" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-purple-400">Pilar 03</span>
+                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Migrasi Data Penuh & Pelatihan Tim (Done-For-You)</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Tim kami membantu memindahkan seluruh data lama Anda hingga tuntas tanpa pusing re-entry, sekaligus melatih penjaga atau admin kos Anda cara mengoperasikan sistem dengan lancar.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span>Zero downtime, bebas pusing teknis</span>
+                    </div>
+                </div>
+
+                <!-- Fitur 4 -->
+                <div class="p-6 sm:p-7 rounded-2xl glass-panel hover:border-accent-amber/40 hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 group-hover:bg-amber-500 group-hover:text-navy-950 transition-colors">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Pilar 04</span>
+                    <h3 class="text-xl font-bold text-white mt-1 mb-3">Laporan Konsolidasi & Audit Operasional</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Pantau ringkasan pemasukan, tunggakan, arus kas, dan performa tingkat hunian dari seluruh properti Anda dalam satu tampilan eksekutif tanpa harus menunggu rekap manual akhir bulan.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                        <span>Deteksi kebocoran dana dan piutang sewa instan</span>
+                    </div>
+                </div>
+
+                <!-- Fitur 5 -->
+                <div class="p-6 sm:p-7 rounded-2xl glass-panel hover:border-brand-500/40 hover:-translate-y-1 transition-all duration-300 group md:col-span-2 lg:col-span-2">
+                    <div class="flex flex-col sm:flex-row sm:items-start gap-5">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500 group-hover:text-navy-950 transition-colors">
+                            <i data-lucide="headset" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">Pilar 05 (Eksklusif)</span>
+                            <h3 class="text-xl font-bold text-white mt-1 mb-2">Dukungan Teknis Prioritas (VIP Direct Access)</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                                Jalur bantuan khusus yang lebih cepat apabila ada kendala teknis, penyesuaian alur kerja sewa, atau kebutuhan operasional mendesak. Tiket Anda diprioritaskan oleh senior engineering support kami.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                                    <span>Fast response via WhatsApp Dedicated</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+                                    <span>Konsultasi workflow & penyesuaian form</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SECTION: LIVE CUSTOM BRANDING SANDBOX -->
+    <section id="branding-demo" class="py-20 bg-slate-950 border-t border-slate-800/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
+                    Eksplorasi Interaktif
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-4">
+                    Simulasikan Merek Kos Anda Sendiri Sekarang
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Ketik nama kos impian atau properti Anda dan pilih warna utama. Lihat bagaimana portal penyewa dan dokumen kontrak digital Anda bertransformasi seketika.
+                </p>
+            </div>
+
+            <!-- Interactive Sandbox Box -->
+            <div class="max-w-4xl mx-auto rounded-2xl glass-panel p-6 sm:p-8 border-slate-700 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Left: Control Panel -->
+                    <div class="lg:col-span-5 space-y-5">
+                        <h4 class="text-sm font-bold text-slate-200 uppercase tracking-wider flex items-center gap-2">
+                            <i data-lucide="sliders" class="w-4 h-4 text-brand-400"></i>
+                            Kustomisasi Brand
+                        </h4>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Nama Kos / Bisnis Anda:</label>
+                            <input type="text" id="custom-name-input" value="Grand Pavilion Residence" oninput="updateBrandPreview()" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Warna Aksen Brand:</label>
+                            <div class="flex items-center gap-3">
+                                <button onclick="setBrandColor('#16a34a', 'Emerald Luxury')" class="w-8 h-8 rounded-full bg-emerald-600 ring-2 ring-white/50 focus:outline-none hover:scale-110 transition-transform" title="Emerald"></button>
+                                <button onclick="setBrandColor('#2563eb', 'Royal Navy')" class="w-8 h-8 rounded-full bg-blue-600 ring-2 ring-transparent focus:ring-white/50 focus:outline-none hover:scale-110 transition-transform" title="Royal Blue"></button>
+                                <button onclick="setBrandColor('#7c3aed', 'Imperial Purple')" class="w-8 h-8 rounded-full bg-purple-600 ring-2 ring-transparent focus:ring-white/50 focus:outline-none hover:scale-110 transition-transform" title="Purple"></button>
+                                <button onclick="setBrandColor('#d97706', 'Warm Amber Gold')" class="w-8 h-8 rounded-full bg-amber-600 ring-2 ring-transparent focus:ring-white/50 focus:outline-none hover:scale-110 transition-transform" title="Amber"></button>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 space-y-1">
+                            <div class="font-semibold text-slate-300">Hasil Kustomisasi:</div>
+                            <p>Seluruh invoice PDF, portal self-service penghuni, dan kwitansi WhatsApp langsung menyandang kredibilitas bisnis Anda.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Live Visual Mobile Preview Card -->
+                    <div class="lg:col-span-7">
+                        <div class="rounded-2xl p-5 bg-navy-900 border border-slate-700 shadow-xl relative overflow-hidden transition-all duration-300">
+                            <!-- Top Bar Preview -->
+                            <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
+                                <div class="flex items-center gap-2.5">
+                                    <div id="preview-logo-box" class="w-9 h-9 rounded-lg bg-emerald-600 flex items-center justify-center font-bold text-white text-sm shadow">
+                                        GP
+                                    </div>
+                                    <div>
+                                        <div id="preview-brand-title" class="text-sm font-bold text-white">Grand Pavilion Residence</div>
+                                        <div class="text-[10px] text-slate-400">Portal Penyewa & Layanan Mandiri</div>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-800 text-emerald-400 border border-emerald-500/30">Terverifikasi</span>
+                            </div>
+
+                            <!-- Tenant Rent Card Details -->
+                            <div class="space-y-3">
+                                <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80">
+                                    <div class="flex justify-between items-center text-xs mb-1">
+                                        <span class="text-slate-400">Kamar: <strong class="text-white">Suite 201 (AC + Balkon)</strong></span>
+                                        <span class="text-emerald-400 font-bold">Lunas</span>
+                                    </div>
+                                    <div class="text-xs text-slate-400">Penghuni: <span class="text-slate-200">Aditya Pratama, S.T.</span></div>
+                                </div>
+
+                                <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80 flex items-center justify-between text-xs">
+                                    <div>
+                                        <div class="text-slate-400">Perjanjian Kontrak Sewa Digital:</div>
+                                        <div class="font-medium text-slate-200 flex items-center gap-1 mt-0.5">
+                                            <i data-lucide="file-text" class="w-3.5 h-3.5 text-brand-400"></i>
+                                            <span>Klausul_Resmi_<span id="preview-brand-slug">Grand_Pavilion</span>.pdf</span>
+                                        </div>
+                                    </div>
+                                    <span id="preview-badge-action" class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-semibold text-xs shadow-sm cursor-pointer hover:opacity-90">
+                                        Lihat Kontrak
+                                    </span>
+                                </div>
+
+                                <div class="text-[11px] text-center text-slate-500 italic pt-1">
+                                    "Penghuni merasa tinggal di kos berkelas hotel bintang 3 berkat portal beridentitas resmi."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SECTION: SIMULASI ROI & PENGHEMATAN WAKTU -->
+    <section id="kalkulator" class="py-20 bg-slate-950/40 relative border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+                    Kalkulator Efisiensi
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-4">
+                    Berapa Jam Kerja & Biaya Operasional yang Bisa Anda Hemat?
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Geser slider di bawah ini untuk melihat perkiraan waktu yang dihemat serta potensi kebocoran dana yang berhasil dicegah dengan pendampingan sistem konsolidasi.
+                </p>
+            </div>
+
+            <!-- Calculator Widget -->
+            <div class="max-w-4xl mx-auto rounded-2xl glass-panel p-6 sm:p-8 border-slate-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Controls -->
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-sm font-semibold text-slate-200">Jumlah Cabang Kos:</label>
+                                <span id="val-branches" class="text-base font-bold text-brand-400 bg-brand-500/10 px-2.5 py-0.5 rounded border border-brand-500/20">2 Cabang</span>
+                            </div>
+                            <input type="range" id="slider-branches" min="1" max="10" value="2" oninput="calculateROI()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                            <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                                <span>1 Cabang</span>
+                                <span>5 Cabang</span>
+                                <span>10+ Cabang</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-sm font-semibold text-slate-200">Total Keseluruhan Kamar:</label>
+                                <span id="val-rooms" class="text-base font-bold text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded border border-cyan-500/20">35 Kamar</span>
+                            </div>
+                            <input type="range" id="slider-rooms" min="10" max="200" step="5" value="35" oninput="calculateROI()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500">
+                            <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                                <span>10 Kamar</span>
+                                <span>100 Kamar</span>
+                                <span>200 Kamar</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400">
+                            <i data-lucide="info" class="w-4 h-4 text-brand-400 inline mr-1"></i>
+                            Kalkulasi didasarkan pada studi waktu rekap kas, pencocokan bukti transfer manual, edukasi penjaga kos, dan follow-up tunggakan sewa.
+                        </div>
+                    </div>
+
+                    <!-- Output Results -->
+                    <div class="rounded-xl p-6 bg-navy-900 border border-slate-700/80 space-y-5">
+                        <div class="border-b border-slate-800 pb-4">
+                            <div class="text-xs text-slate-400">Waktu Pemilik Yang Dihemat Per Bulan:</div>
+                            <div id="res-hours" class="text-3xl font-extrabold text-brand-400 mt-1">~32 Jam / Bulan</div>
+                            <div class="text-[11px] text-slate-400 mt-0.5">Setara dengan 4 hari kerja penuh yang bisa Anda gunakan untuk mencari properti baru!</div>
+                        </div>
+
+                        <div class="border-b border-slate-800 pb-4">
+                            <div class="text-xs text-slate-400">Nilai Efisiensi Beban Admin / Tahun:</div>
+                            <div id="res-savings" class="text-2xl font-bold text-white mt-1">Rp 18.500.000+</div>
+                            <div class="text-[11px] text-emerald-400">Mencegah kebocoran penerimaan kas & biaya hire admin IT terpisah.</div>
+                        </div>
+
+                        <div class="pt-1">
+                            <div class="text-xs text-slate-400 mb-1">Kecepatan Audit & Laporan:</div>
+                            <div class="text-sm font-bold text-slate-200 flex items-center gap-2">
+                                <span class="line-through text-slate-500 text-xs">3-5 Hari Rekap</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 text-brand-400"></i>
+                                <span class="text-emerald-400">1 Klik Real-Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TARGET AUDIENCE MATRIX (Untuk Siapa Penawaran Ini?) -->
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
+                    Kesesuaian Profil
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-4">
+                    Untuk Siapa Penawaran Ini Paling Tepat?
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Paket ini dirancang khusus bagi pemilik kos dengan banyak kamar atau lebih dari satu cabang yang ingin mendelegasikan urusan teknis sepenuhnya.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Sangat Tepat -->
+                <div class="p-6 sm:p-8 rounded-2xl glass-panel border-emerald-500/30">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+                        Sangat Cocok Bagi Anda yang:
+                    </h3>
+                    <ul class="space-y-3.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-1"></i>
+                            <span>Memiliki lebih dari 1 lokasi kos atau kos berkapasitas di atas 10-15 kamar.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-1"></i>
+                            <span>Ingin menjaga standar layanan profesional & brand premium di mata penghuni.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-1"></i>
+                            <span>Tidak ingin repot memindahkan data manual dan tidak punya waktu mengajari staf berulang-ulang.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-1"></i>
+                            <span>Ingin mempercepat ekspansi properti tanpa pusing urusan server, data, atau troubleshooting IT.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kurang Cocok -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/30 border border-slate-800">
+                    <h3 class="text-lg font-bold text-slate-300 flex items-center gap-2 mb-4">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-slate-500"></i>
+                        Mungkin Belum Cocok Jika:
+                    </h3>
+                    <ul class="space-y-3.5 text-sm text-slate-400">
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="x" class="w-4 h-4 text-slate-600 flex-shrink-0 mt-1"></i>
+                            <span>Hanya mengelola 1-3 kamar kos keluarga sederhana tanpa rencana penambahan properti.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="x" class="w-4 h-4 text-slate-600 flex-shrink-0 mt-1"></i>
+                            <span>Lebih nyaman mencatat seluruh transaksi di kertas buku kas manual dan mengaudit sendiri fisik uang tunai.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="x" class="w-4 h-4 text-slate-600 flex-shrink-0 mt-1"></i>
+                            <span>Tidak memerlukan portal branding atau otomasi laporan antar-cabang.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: THE PRICING & SPECIAL OFFER BOX (Core Conversion Engine) -->
+    <section id="penawaran" class="py-24 relative overflow-hidden">
+        <!-- Accent Glow background for pricing -->
+        <div class="absolute inset-0 bg-gradient-to-b from-navy-950 via-emerald-950/20 to-navy-950 pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-300 border border-brand-500/30">
+                    <i data-lucide="tag" class="w-3.5 h-3.5"></i>
+                    PENAWARAN KHUSUS & TERBATAS
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 mb-4">
+                    Investasi Cerdas untuk Skala Bisnis Kos Anda
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base">
+                    Satu paket lengkap berisi semua fitur multi-properti, setup branding kustom, migrasi data Done-For-You, dan pendampingan prioritas.
+                </p>
+            </div>
+
+            <!-- Main Pricing Card -->
+            <div class="rounded-3xl p-1 gradient-border shadow-2xl shadow-emerald-950">
+                <div class="rounded-[22px] bg-navy-900/95 p-6 sm:p-10 lg:p-12 relative overflow-hidden backdrop-blur-xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <!-- Left Details (7 cols) -->
+                        <div class="lg:col-span-7 space-y-6">
+                            <div>
+                                <div class="inline-block px-3 py-1 rounded-md text-xs font-bold bg-brand-500 text-navy-950 mb-2">
+                                    PAKET EKSEKUTIF ALL-IN-ONE
+                                </div>
+                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                                    Paket Ekspansi & Pendampingan Prioritas
+                                </h3>
+                                <p class="text-slate-400 text-sm mt-1">
+                                    Sistem Informasi Manajemen Rumah Kos (Multi-Branch Edition)
+                                </p>
+                            </div>
+
+                            <!-- Value Stack Breakdown -->
+                            <div class="space-y-3 pt-2">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                                    </div>
+                                    <div class="text-sm">
+                                        <span class="font-bold text-white">Pengelolaan Multi-Cabang / Multi-Properti:</span>
+                                        <span class="text-slate-300"> Kelola beberapa lokasi sekaligus dengan database terisolasi rapi.</span>
+                                        <span class="text-[11px] text-slate-500 block">Nilai normal: Rp 650.000</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                                    </div>
+                                    <div class="text-sm">
+                                        <span class="font-bold text-white">Kustomisasi Identitas Rumah Kos (Custom Branding):</span>
+                                        <span class="text-slate-300"> Tampilkan nama & logo kos di portal dan dokumen digital.</span>
+                                        <span class="text-[11px] text-slate-500 block">Nilai normal: Rp 500.000</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                                    </div>
+                                    <div class="text-sm">
+                                        <span class="font-bold text-white">Migrasi Penuh & Pelatihan Tim (Done-For-You):</span>
+                                        <span class="text-slate-300"> Pindah data beres 100% dan penjaga kos dilatih sampai mahir.</span>
+                                        <span class="text-[11px] text-slate-500 block">Nilai normal: Rp 750.000</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                                    </div>
+                                    <div class="text-sm">
+                                        <span class="font-bold text-white">Laporan Keuangan Konsolidasi & Audit:</span>
+                                        <span class="text-slate-300"> 1 Lembar dashboard eksekutif untuk seluruh cabang.</span>
+                                        <span class="text-[11px] text-slate-500 block">Nilai normal: Rp 350.000</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                                    </div>
+                                    <div class="text-sm">
+                                        <span class="font-bold text-white">Dukungan Teknis Prioritas (VIP Direct Line):</span>
+                                        <span class="text-slate-300"> Jalur bantuan cepat via WhatsApp khusus kendala operasional.</span>
+                                        <span class="text-[11px] text-slate-500 block">Nilai normal: Rp 200.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Price CTA Box (5 cols) -->
+                        <div class="lg:col-span-5 bg-slate-950/80 rounded-2xl p-6 sm:p-8 border border-slate-800 text-center flex flex-col justify-between h-full">
+                            <div>
+                                <div class="text-xs uppercase font-bold tracking-wider text-slate-400 mb-1">Total Nilai Layanan</div>
+                                <div class="text-sm text-slate-500 line-through font-semibold mb-3">Rp 2.450.000</div>
+
+                                <div class="inline-block px-3 py-1 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 text-xs font-bold mb-4">
+                                    HEMAT LEBIH DARI 95%
+                                </div>
+
+                                <div class="text-xs text-slate-400 mb-1">Investasi Khusus Hari Ini:</div>
+                                <div class="flex items-baseline justify-center gap-1">
+                                    <span class="text-lg font-bold text-slate-300">Rp</span>
+                                    <span class="text-5xl sm:text-6xl font-black text-white tracking-tight">99.000</span>
+                                </div>
+                                <p class="text-xs text-brand-400 font-medium mt-2">
+                                    Sekali investasi penyiapan awal & integrasi penuh
+                                </p>
+                            </div>
+
+                            <div class="mt-8 space-y-4">
+                                <button onclick="openCheckoutModal()" class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-brand-500 to-emerald-400 hover:from-brand-400 hover:to-emerald-300 text-navy-950 font-extrabold text-base shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 group">
+                                    <span>Upgrade ke Paket Prioritas Sekarang</span>
+                                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+
+                                <div class="flex items-center justify-center gap-2 text-xs text-slate-400">
+                                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                                    <span>Garansi 100% Kepuasan Pemilik Kos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TESTIMONIALS & TRUST -->
+    <section class="py-20 bg-slate-950/50 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">
+                    Kisah Nyata Juragan Kos
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">
+                    Mereka yang Sudah Meninggalkan Cara Manual
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="p-6 rounded-2xl glass-panel flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex text-amber-400 gap-1 text-sm">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-slate-300 italic">
+                            "Sebelumnya saya pusing setiap tanggal 1 harus mencocokkan mutasi bank 3 cabang kos di BSD dan Depok. Dengan Paket Prioritas, tim SIMKos bantu migrasi data 64 kamar dalam 1 hari. Laporan konsolidasinya sangat melegakan!"
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center font-bold text-brand-400 text-sm">
+                            HW
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">H. Hendrawan</div>
+                            <div class="text-xs text-slate-400">Owner Kost Graha Melati (3 Cabang)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="p-6 rounded-2xl glass-panel flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex text-amber-400 gap-1 text-sm">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-slate-300 italic">
+                            "Fitur Custom Branding-nya bikin kos putri kami kelihatan eksklusif banget. Anak-anak kos mahasiswa dapat link portal berlogo kami sendiri. Penjaga kos saya yang awalnya gaptek juga diajarin ramah sampai bisa."
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center font-bold text-cyan-400 text-sm">
+                            RN
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Ibu Ratna Ningsih</div>
+                            <div class="text-xs text-slate-400">Pengelola D'Kost Putri Pogung Jogja</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="p-6 rounded-2xl glass-panel flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex text-amber-400 gap-1 text-sm">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-slate-300 italic">
+                            "Hanya dengan Rp 99.000 sudah dapat bantuan migrasi dan VIP support WhatsApp. Kapan pun ada update aturan sewa kamar, saya langsung chat dan dibantu solusinya dalam hitungan menit."
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-slate-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center font-bold text-purple-400 text-sm">
+                            DP
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Dimas Permana</div>
+                            <div class="text-xs text-slate-400">Operator Properti Kost Bandung</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FAQ (Frequently Asked Questions) -->
+    <section id="faq" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-800 px-3 py-1 rounded-full">
+                    Tanya Jawab
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">
+                    Pertanyaan Seputar Layanan Ekspansi & Prioritas
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="rounded-xl glass-panel border border-slate-800 overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full px-6 py-4 text-left font-semibold text-white flex items-center justify-between gap-4 hover:bg-slate-800/40 transition-colors">
+                        <span class="text-sm sm:text-base">Bagaimana proses migrasi data Done-For-You dijalankan?</span>
+                        <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-1" class="hidden px-6 pb-4 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
+                        Setelah Anda melakukan upgrade, tim onboarding kami akan menghubungi Anda via WhatsApp. Anda cukup mengirimkan catatan data penghuni lama Anda (baik file Excel, Google Sheet, foto buku catatan, atau chat WhatsApp). Tim kami yang akan memvalidasi, merapikan, dan memasukkannya ke sistem sampai siap digunakan 100%.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="rounded-xl glass-panel border border-slate-800 overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full px-6 py-4 text-left font-semibold text-white flex items-center justify-between gap-4 hover:bg-slate-800/40 transition-colors">
+                        <span class="text-sm sm:text-base">Apakah data keuangan antar cabang bisa dilihat oleh penjaga kos cabang lain?</span>
+                        <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-2" class="hidden px-6 pb-4 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
+                        Tentu tidak. Sistem kami menerapkan Role-Based Access Control ketat. Penjaga Cabang A hanya dapat melihat kamar dan tamu di Cabang A. Hanya akun Master Owner (Anda) yang memiliki izin membuka Laporan Konsolidasian seluruh cabang.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="rounded-xl glass-panel border border-slate-800 overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full px-6 py-4 text-left font-semibold text-white flex items-center justify-between gap-4 hover:bg-slate-800/40 transition-colors">
+                        <span class="text-sm sm:text-base">Bagaimana jika staf atau penjaga kos saya masih gaptek?</span>
+                        <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-3" class="hidden px-6 pb-4 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
+                        Jangan khawatir! Paket ini mencakup pelatihan personal via video call atau modul video tutorial interaktif bahasa Indonesia yang sangat simpel. Tim kami mendampingi staf Anda secara bertahap sampai mereka terbiasa menginput sewa baru dan mengecek status kamar tanpa perlu bertanya lagi kepada Anda.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="rounded-xl glass-panel border border-slate-800 overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full px-6 py-4 text-left font-semibold text-white flex items-center justify-between gap-4 hover:bg-slate-800/40 transition-colors">
+                        <span class="text-sm sm:text-base">Apakah harga Rp 99.000 ini biaya bulanan atau sekali bayar?</span>
+                        <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-4" class="hidden px-6 pb-4 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
+                        Investasi Rp 99.000 ini adalah penawaran promosi onboarding khusus untuk membuka lisensi Multi-Cabang, penyiapan Custom Branding awal, jasa migrasi Done-For-You, dan akses jalur WhatsApp Prioritas. Tidak ada biaya migrasi tersembunyi lagi.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA BANNER -->
+    <section class="py-16 bg-gradient-to-r from-emerald-950 via-navy-900 to-teal-950 border-t border-brand-500/30 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">
+                Siap Melipatgandakan Bisnis Kos Anda dengan Tenang?
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base mb-8 max-w-2xl mx-auto">
+                Tinggalkan rekap manual, tampil profesional dengan nama kos Anda sendiri, dan biarkan tim ahli kami mengurus seluruh kerumitan teknisnya.
+            </p>
+            <button onclick="openCheckoutModal()" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-emerald-400 hover:from-brand-400 hover:to-emerald-300 text-navy-950 font-extrabold text-base shadow-xl shadow-brand-500/20 hover:scale-105 transition-all">
+                Upgrade ke Paket Ekspansi & Prioritas Sekarang (Rp 99.000)
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 bg-navy-950 border-t border-slate-800 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i data-lucide="building-2" class="w-4 h-4 text-brand-400"></i>
+                <span class="text-slate-400 font-semibold">Sistem Informasi Manajemen Rumah Kos &copy; 2026</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <span>Multi-Property Enterprise Edition</span>
+                <span>Enkripsi Data Bank-Grade 256-bit</span>
+                <span>Garansi 30 Hari</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE CONVERSION BAR -->
+    <div id="sticky-mobile-bar" class="fixed bottom-0 left-0 right-0 z-40 p-3 bg-navy-950/95 backdrop-blur-md border-t border-slate-800 sm:hidden flex items-center justify-between gap-3">
+        <div>
+            <div class="text-[10px] text-slate-400">Paket Ekspansi & Prioritas</div>
+            <div class="text-sm font-extrabold text-brand-400">Rp 99.000</div>
+        </div>
+        <button onclick="openCheckoutModal()" class="px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-navy-950 font-bold text-xs shadow-md">
+            Upgrade Sekarang
+        </button>
+    </div>
+
+    <!-- MODAL POPUP CHECKOUT / AKTIVASI -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy-950/80 backdrop-blur-md hidden transition-opacity duration-300">
+        <div class="relative w-full max-w-lg rounded-2xl bg-navy-900 border border-brand-500/40 p-6 sm:p-8 shadow-2xl text-left">
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg bg-slate-800/60">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white">Upgrade Paket Prioritas Kos</h3>
+                    <p class="text-xs text-brand-400">Aktivasi Multi-Cabang & Layanan Done-For-You</p>
+                </div>
+            </div>
+
+            <!-- Investment Banner -->
+            <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between mb-5">
+                <div>
+                    <span class="text-xs text-slate-400">Biaya Investasi:</span>
+                    <div class="text-lg font-extrabold text-white">Rp 99.000</div>
+                </div>
+                <span class="text-[11px] font-semibold px-2.5 py-1 rounded bg-brand-500/10 text-brand-400 border border-brand-500/20">
+                    Akses All-In-One Aktif
+                </span>
+            </div>
+
+            <!-- Form -->
+            <form id="upgrade-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Nama Pemilik / Pengelola:</label>
+                    <input type="text" id="cust-name" required placeholder="Contoh: Hendrawan Wijaya" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:border-brand-500 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Nomor WhatsApp Aktif:</label>
+                    <input type="tel" id="cust-wa" required placeholder="Contoh: 081234567890" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:border-brand-500 focus:outline-none">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Nama Rumah Kos:</label>
+                        <input type="text" id="cust-kos" required placeholder="Contoh: Kost Melati" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:border-brand-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Jumlah Cabang:</label>
+                        <select id="cust-branches" class="w-full px-3 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:border-brand-500 focus:outline-none">
+                            <option value="2 Cabang">2 Cabang</option>
+                            <option value="3-5 Cabang">3 - 5 Cabang</option>
+                            <option value=">5 Cabang">&gt; 5 Cabang</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-brand-500 hover:bg-brand-400 text-navy-950 font-bold text-sm shadow-lg shadow-brand-500/25 transition-all flex items-center justify-center gap-2">
+                        <span>Konfirmasi & Mulai Onboarding VIP</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                    <p class="text-[11px] text-center text-slate-400 mt-2">
+                        Tim onboarding kami akan langsung menghubungi WhatsApp Anda dalam hitungan menit untuk memulai migrasi data.
+                    </p>
+                </div>
+            </form>
+
+            <!-- Success State Screen (Hidden initially) -->
+            <div id="modal-success-state" class="hidden text-center py-6 space-y-4">
+                <div class="w-16 h-16 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center mx-auto text-2xl">
+                    <i data-lucide="check" class="w-8 h-8"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Selamat Datang di Layanan Prioritas!</h4>
+                <p class="text-xs text-slate-300 leading-relaxed max-w-sm mx-auto">
+                    Data Anda telah kami amankan. Tim spesialis migrasi SIMKos sedang menyiapkan link dashboard cabang & menghubungi WhatsApp Anda.
+                </p>
+                <div class="pt-2">
+                    <a id="wa-direct-link" href="#" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        Buka WhatsApp Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. Mockup Branch Switcher Logic
+        const mockData = {
+            all: {
+                revenue: 'Rp 118.450.000',
+                occupancy: '58 / 60 Kamar',
+                arrears: 'Rp 1.850.000'
+            },
+            bsd: {
+                revenue: 'Rp 52.800.000',
+                occupancy: '24 / 24 Kamar',
+                arrears: 'Rp 0 (Nihil)'
+            },
+            dago: {
+                revenue: 'Rp 38.650.000',
+                occupancy: '20 / 22 Kamar',
+                arrears: 'Rp 1.850.000'
+            }
+        };
+
+        function switchMockupBranch(branch) {
+            document.getElementById('mock-revenue').innerText = mockData[branch].revenue;
+            document.getElementById('mock-occupancy').innerText = mockData[branch].occupancy;
+            document.getElementById('mock-arrears').innerText = mockData[branch].arrears;
+
+            const buttons = ['all', 'bsd', 'dago'];
+            buttons.forEach(b => {
+                const btn = document.getElementById('btn-mock-' + b);
+                if (b === branch) {
+                    btn.className = 'px-2.5 py-1 rounded font-semibold bg-brand-600 text-white transition-all';
+                } else {
+                    btn.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition-all';
+                }
+            });
+        }
+
+        // 2. Interactive Custom Branding Sandbox
+        function updateBrandPreview() {
+            const name = document.getElementById('custom-name-input').value.trim() || 'Grand Pavilion Residence';
+            document.getElementById('preview-brand-title').innerText = name;
+            document.getElementById('mock-brand-name-header').innerText = name;
+            
+            // Generate initials
+            const words = name.split(' ');
+            let initials = '';
+            if (words.length >= 2) {
+                initials = (words[0][0] || '') + (words[1][0] || '');
+            } else if (words.length === 1 && words[0].length > 0) {
+                initials = words[0].substring(0, 2);
+            }
+            initials = initials.toUpperCase() || 'KP';
+            
+            document.getElementById('preview-logo-box').innerText = initials;
+            document.getElementById('mock-brand-badge').innerText = initials;
+
+            // Update filename slug
+            const slug = name.replace(/[^a-zA-Z0-9]/g, '_');
+            document.getElementById('preview-brand-slug').innerText = slug;
+        }
+
+        function setBrandColor(color, label) {
+            document.getElementById('preview-logo-box').style.backgroundColor = color;
+            document.getElementById('mock-brand-badge').style.backgroundColor = color;
+            document.getElementById('preview-badge-action').style.backgroundColor = color;
+        }
+
+        // 3. Interactive ROI & Time Savings Calculator
+        function calculateROI() {
+            const branches = parseInt(document.getElementById('slider-branches').value);
+            const rooms = parseInt(document.getElementById('slider-rooms').value);
+
+            document.getElementById('val-branches').innerText = branches + ' Cabang';
+            document.getElementById('val-rooms').innerText = rooms + ' Kamar';
+
+            // Calculations based on industry benchmarks:
+            // ~ 0.7 hours saved per room per month in billing + 6 hours per branch in audit
+            const hoursSaved = Math.round((rooms * 0.75) + (branches * 5));
+            // Financial savings from leak prevention and admin overhead (Rp 500k per branch + Rp 120k per room / month -> yearly)
+            const yearlySavings = Math.round(((branches * 450000) + (rooms * 65000)) * 12);
+
+            document.getElementById('res-hours').innerText = `~${hoursSaved} Jam / Bulan`;
+            document.getElementById('res-savings').innerText = `Rp ${(yearlySavings).toLocaleString('id-ID')}+`;
+        }
+
+        // 4. FAQ Accordion Logic
+        function toggleFaq(id) {
+            const ans = document.getElementById('faq-ans-' + id);
+            const icon = document.getElementById('faq-icon-' + id);
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                ans.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // 5. Modal Checkout Logic
+        const modal = document.getElementById('checkout-modal');
+        function openCheckoutModal() {
+            modal.classList.remove('hidden');
+            // prefill kos name if typed in branding demo
+            const typedKos = document.getElementById('custom-name-input').value;
+            if (typedKos) {
+                document.getElementById('cust-kos').value = typedKos;
+            }
+        }
+
+        function closeCheckoutModal() {
+            modal.classList.add('hidden');
+        }
+
+        // Close modal on click outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeCheckoutModal();
+            }
+        });
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('cust-name').value;
+            const wa = document.getElementById('cust-wa').value;
+            const kos = document.getElementById('cust-kos').value;
+            const branches = document.getElementById('cust-branches').value;
+
+            // Trigger confetti celebration
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 120,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            }
+
+            // Hide form and show success state
+            document.getElementById('upgrade-form').classList.add('hidden');
+            const successState = document.getElementById('modal-success-state');
+            successState.classList.remove('hidden');
+
+            // Format direct WhatsApp URL
+            const textMsg = encodeURIComponent(
+                `Halo Tim SIMKos, saya sudah mengajukan Upgrade ke *Paket Ekspansi & Pendampingan Prioritas (Rp 99.000)*.\n\n` +
+                `Nama: ${name}\n` +
+                `WhatsApp: ${wa}\n` +
+                `Nama Kos: ${kos}\n` +
+                `Jumlah Properti: ${branches}\n\n` +
+                `Mohon panduan untuk migrasi data awal dan aktivasi multi-cabang. Terima kasih!`
+            );
+            document.getElementById('wa-direct-link').href = `https://wa.me/?text=${textMsg}`;
+        }
+    </script>
+</body>
+</html>
