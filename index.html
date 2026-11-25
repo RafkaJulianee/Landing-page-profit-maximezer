@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paket Ekspansi & Pendampingan Prioritas — Sistem Informasi Manajemen Rumah Kos</title>
-    <meta name="description" content="Penawaran Khusus Pemilik & Pengelola Kos yang Ingin Mengelola Banyak Cabang, Tampil Lebih Profesional dengan Identitas Sendiri, dan Mendapat Dukungan Penuh.">
+    <title>Paket Ekspansi & Pendampingan Prioritas Rumah Kos — KosinAja (Profit Maximizer)</title>
+    <meta name="description" content="Solusi Premium untuk Pengelola Kos Multi-Cabang, Kustomisasi Identitas Kos, dan Pendampingan Operasional Menyeluruh.">
     
-    <!-- Google Fonts: Plus Jakarta Sans & Instrument Serif -->
+    <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,27 +19,27 @@
                 extend: {
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-                        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
                     },
                     colors: {
-                        stone: {
-                            50: '#fafaf9',
-                            100: '#f5f5f4',
-                            200: '#e7e5e4',
-                            300: '#d6d3d1',
-                            600: '#57534e',
-                            700: '#44403c',
-                            800: '#292524',
-                            900: '#1c1917',
-                            950: '#0c0a09',
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
                         },
-                        forest: {
-                            50: '#f2f7f4',
-                            100: '#e1ede6',
-                            600: '#1b4332',
-                            700: '#143325',
-                            800: '#0f261c',
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#090d16',
                         }
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px -15px rgba(5, 150, 105, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.8)',
+                        'glow': '0 0 35px -5px rgba(16, 185, 129, 0.25)',
                     }
                 }
             }
@@ -48,256 +48,828 @@
 
     <style>
         body {
-            background-color: #fafaf9;
-            color: #1c1917;
+            background-color: #f8fafc;
+            color: #0f172a;
             font-feature-settings: "cv02", "cv03", "cv04", "cv11";
         }
-        .editorial-shadow {
-            box-shadow: 0 1px 3px rgba(28, 25, 23, 0.04), 0 12px 32px -4px rgba(28, 25, 23, 0.05);
+        .bg-grid-pattern {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, rgba(226, 232, 240, 0.6) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
         }
     </style>
 </head>
-<body class="antialiased selection:bg-forest-600 selection:text-white">
+<body class="antialiased selection:bg-brand-600 selection:text-white text-slate-800">
 
-    <!-- Minimal Header -->
-    <header class="border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-sm sticky top-0 z-30">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-2.5 h-2.5 rounded-full bg-forest-600"></div>
-                <span class="text-sm font-semibold tracking-tight text-stone-900">Sistem Informasi Manajemen Rumah Kos</span>
-            </div>
-            <a href="https://wa.me/6285871444639?text=Halo%2C%20saya%20ingin%20Upgrade%20ke%20Paket%20Ekspansi%20%26%20Pendampingan%20Prioritas%20%E2%80%94%20Sistem%20Informasi%20Manajemen%20Rumah%20Kos%20(Rp%2099.000)." target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-4 py-2 rounded-lg bg-stone-900 text-stone-50 hover:bg-stone-800 transition-colors">
-                Upgrade Sekarang
+    <!-- Header / Navbar -->
+    <header class="border-b border-slate-200/90 bg-white/90 backdrop-blur-md sticky top-0 z-40 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 py-3.5 flex items-center justify-between gap-4">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-600 to-emerald-800 flex items-center justify-center text-white shadow-md shadow-brand-600/20 group-hover:scale-105 transition-transform">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-lg font-extrabold tracking-tight text-slate-900">KosinAja</span>
+                        <span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-brand-50 text-brand-700 border border-brand-200">
+                            PROFIT MAXIMIZER
+                        </span>
+                    </div>
+                    <span class="text-[11px] text-slate-500 font-medium block -mt-0.5">Sistem Manajemen Rumah Kos</span>
+                </div>
             </a>
+
+            <!-- Navigation Links (Desktop) -->
+            <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+                <a href="#untuk-siapa" class="hover:text-brand-600 transition-colors">Untuk Siapa</a>
+                <a href="#fasilitas" class="hover:text-brand-600 transition-colors">Fasilitas Utama</a>
+                <a href="#alur-aktivasi" class="hover:text-brand-600 transition-colors">Alur Aktivasi</a>
+                <a href="#opsi-pengembangan" class="hover:text-brand-600 transition-colors">Opsi Ekstra</a>
+                <a href="#investasi" class="hover:text-brand-600 transition-colors">Investasi</a>
+            </nav>
+
+            <!-- CTA Header Button -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/6285871444639?text=Halo%20Tim%20KosinAja%2C%20saya%20ingin%20konsultasi%20dan%20aktivasi%20Paket%20Ekspansi%20%26%20Pendampingan%20Prioritas%20Rumah%20Kos%20(Profit%20Maximizer)." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2.5 rounded-xl bg-brand-600 text-white hover:bg-brand-700 active:scale-95 shadow-sm shadow-brand-600/30 transition-all">
+                    <span>Aktivasi Paket</span>
+                    <svg class="w-4 h-4 hidden sm:inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-5xl mx-auto px-6 pt-14 pb-24 md:pt-20 md:pb-32">
+    <!-- Main Content -->
+    <main>
 
         <!-- HERO SECTION -->
-        <section class="max-w-3xl">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-forest-50 border border-forest-100 text-forest-700 text-xs font-semibold tracking-wide uppercase mb-6">
-                Layanan Ekspansi &amp; Pendampingan Prioritas
-            </div>
+        <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-white border-b border-slate-200">
+            <!-- Background Gradients & Grid -->
+            <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none"></div>
+            <div class="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-emerald-100/60 blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-teal-100/50 blur-3xl pointer-events-none"></div>
 
-            <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-stone-950 leading-[1.15] mb-6">
-                Kembangkan Bisnis Kos Lebih Cepat dengan Layanan Ekspansi &amp; Pendampingan Prioritas
-            </h1>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    
+                    <!-- Pill Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200/90 text-brand-700 text-xs font-bold tracking-wide mb-6 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        <span>LAYANAN RESMI PROFIT MAXIMIZER</span>
+                    </div>
 
-            <p class="text-lg sm:text-xl font-medium text-stone-700 leading-relaxed mb-8">
-                Penawaran Khusus Pemilik &amp; Pengelola Kos yang Ingin Mengelola Banyak Cabang, Tampil Lebih Profesional dengan Identitas Sendiri, dan Mendapat Dukungan Penuh
-            </p>
-        </section>
+                    <!-- Main H1 Title (from PDF) -->
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15] mb-6">
+                        Paket Ekspansi &amp; Pendampingan Prioritas <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-teal-700">Rumah Kos</span>
+                    </h1>
 
-        <!-- NARRATIVE CONTEXT SECTION -->
-        <section class="mt-10 pt-10 border-t border-stone-200">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div class="lg:col-span-4">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-stone-500">Fase Pertumbuhan</span>
-                    <h2 class="text-lg font-semibold text-stone-900 mt-1">Tantangan Mengelola Lebih dari Satu Lokasi</h2>
-                </div>
-                <div class="lg:col-span-8">
-                    <p class="text-base sm:text-lg text-stone-700 leading-relaxed">
-                        Selamat, Anda sudah memiliki fondasi Sistem Informasi Manajemen Rumah Kos yang rapi untuk operasional harian. Namun, ketika jumlah kamar terus bertambah atau Anda mulai mengelola lebih dari satu lokasi rumah kos, tantangan baru biasanya muncul: menjaga konsistensi merek, memantau laporan antar-cabang secara sekaligus, dan melatih staf atau penjaga kos agar lancar menggunakan sistem tanpa menyita waktu Anda.
+                    <!-- Value Proposition Subtitle (from PDF) -->
+                    <p class="text-lg sm:text-xl text-slate-600 font-medium leading-relaxed mb-8 max-w-2xl mx-auto">
+                        Solusi Premium untuk Pengelola Kos Multi-Cabang, Kustomisasi Identitas Kos, dan Pendampingan Operasional Menyeluruh.
                     </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                        <a href="https://wa.me/6285871444639?text=Halo%20Tim%20KosinAja%2C%20saya%20ingin%20konsultasi%20dan%20aktivasi%20Paket%20Ekspansi%20%26%20Pendampingan%20Prioritas%20Rumah%20Kos%20(Profit%20Maximizer)." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-brand-600 text-white font-bold text-base hover:bg-brand-700 active:scale-98 shadow-lg shadow-brand-600/25 transition-all">
+                            <span>Mulai Aktivasi Paket Prioritas</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                            </svg>
+                        </a>
+                        <a href="#fasilitas" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-base transition-colors">
+                            <span>Lihat Fasilitas &amp; Alur</span>
+                            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats Bar -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-6 border-t border-slate-100 text-left">
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                            <div class="text-xs font-semibold text-slate-500">Multi-Lokasi</div>
+                            <div class="text-sm font-bold text-slate-900 mt-0.5">Sentralisasi Cabang</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                            <div class="text-xs font-semibold text-slate-500">Custom Branding</div>
+                            <div class="text-sm font-bold text-slate-900 mt-0.5">Identitas Mandiri</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                            <div class="text-xs font-semibold text-slate-500">Migrasi Data</div>
+                            <div class="text-sm font-bold text-slate-900 mt-0.5">Done-For-You</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                            <div class="text-xs font-semibold text-slate-500">Support Khusus</div>
+                            <div class="text-sm font-bold text-slate-900 mt-0.5">Jalur Prioritas VIP</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- CLEAN ARCHITECTURAL INTERFACE ILLUSTRATION (No fake popups, clean visual context) -->
-        <section class="mt-14">
-            <div class="rounded-2xl bg-white border border-stone-200 editorial-shadow overflow-hidden">
-                <div class="px-6 py-4 bg-stone-100/70 border-b border-stone-200 flex flex-wrap items-center justify-between gap-4">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-xs font-semibold text-stone-800">Tampilan Eksekutif Multi-Properti</span>
-                        <span class="text-stone-300">•</span>
-                        <span class="text-xs text-stone-500">Portal &amp; Kontrak Digital Beridentitas Resmi</span>
-                    </div>
-                    <div class="text-xs font-medium text-forest-700 bg-forest-50 px-2.5 py-1 rounded border border-forest-100">
-                        Data Terpisah &amp; Terstruktur Per Cabang
-                    </div>
-                </div>
-                <div class="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 bg-white">
-                    <div class="p-5 rounded-xl bg-stone-50 border border-stone-200/80">
-                        <div class="text-xs font-medium text-stone-500 mb-1">Struktur Properti</div>
-                        <div class="text-base font-bold text-stone-900 mb-2">Multi-Cabang Terpusat</div>
-                        <p class="text-xs text-stone-600 leading-relaxed">
-                            Data operasional tiap lokasi tetap terpisah dan aman, namun dapat dipantau sekaligus dari satu akses pemilik.
+
+        <!-- UNTUK SIAPA PAKET INI? SECTION -->
+        <section id="untuk-siapa" class="py-18 md:py-24 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <!-- Left: Description (from PDF) -->
+                    <div class="lg:col-span-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white border border-slate-200 text-brand-700 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+                            Profil Target Pengguna
+                        </div>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-5">
+                            Untuk Siapa Paket Ini?
+                        </h2>
+                        
+                        <!-- Verbatim PDF paragraph -->
+                        <div class="relative pl-5 border-l-4 border-brand-600 mb-6">
+                            <p class="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+                                Paket lanjutan ini dirancang khusus bagi <strong class="text-slate-900 font-bold">pemilik dan pengelola kos (Admin Kos)</strong> yang telah aktif menggunakan sistem utama dan siap mengekspansi skala bisnisnya secara profesional.
+                            </p>
+                        </div>
+
+                        <p class="text-slate-600 text-base leading-relaxed mb-6">
+                            Layanan ini menjadi solusi ideal untuk <strong class="text-slate-800">mengelola portofolio multi-cabang</strong>, <strong class="text-slate-800">mempercepat migrasi data historis</strong>, serta <strong class="text-slate-800">mendapatkan pengawalan teknis prioritas</strong> tanpa mengganggu operasional harian.
                         </p>
-                    </div>
-                    <div class="p-5 rounded-xl bg-stone-50 border border-stone-200/80">
-                        <div class="text-xs font-medium text-stone-500 mb-1">Identitas Properti</div>
-                        <div class="text-base font-bold text-stone-900 mb-2">Custom Branding</div>
-                        <p class="text-xs text-stone-600 leading-relaxed">
-                            Nama, logo, dan identitas rumah kos Anda tampil langsung pada portal penghuni serta dokumen kontrak sewa digital.
-                        </p>
-                    </div>
-                    <div class="p-5 rounded-xl bg-stone-50 border border-stone-200/80">
-                        <div class="text-xs font-medium text-stone-500 mb-1">Pendampingan Penuh</div>
-                        <div class="text-base font-bold text-stone-900 mb-2">Done-For-You &amp; Prioritas</div>
-                        <p class="text-xs text-stone-600 leading-relaxed">
-                            Migrasi data lama hingga tuntas, pelatihan tim operasional, serta jalur dukungan teknis khusus yang lebih cepat.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- WHAT YOU GET SECTION (Exact 5 items from document) -->
-        <section class="mt-20">
-            <div class="max-w-2xl mb-12">
-                <span class="text-xs font-semibold uppercase tracking-wider text-forest-700">Cakupan Layanan</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-stone-950 tracking-tight mt-2">
-                    Apa yang Anda Dapatkan dalam Paket Ekspansi &amp; Prioritas Ini?
-                </h2>
-            </div>
-
-            <div class="divide-y divide-stone-200 border-t border-b border-stone-200">
-                <!-- Item 1 -->
-                <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-baseline">
-                    <div class="md:col-span-1 text-xs font-mono font-semibold text-stone-400">01</div>
-                    <div class="md:col-span-4">
-                        <h3 class="text-lg font-bold text-stone-900">
-                            Pengelolaan Multi-Cabang / Multi-Properti
-                        </h3>
-                    </div>
-                    <div class="md:col-span-7">
-                        <p class="text-base text-stone-700 leading-relaxed">
-                            Kelola dan pantau beberapa lokasi rumah kos sekaligus dengan data per cabang yang tetap terpisah, aman, dan terstruktur.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-baseline">
-                    <div class="md:col-span-1 text-xs font-mono font-semibold text-stone-400">02</div>
-                    <div class="md:col-span-4">
-                        <h3 class="text-lg font-bold text-stone-900">
-                            Kustomisasi Identitas Rumah Kos (Custom Branding)
-                        </h3>
-                    </div>
-                    <div class="md:col-span-7">
-                        <p class="text-base text-stone-700 leading-relaxed">
-                            Tampilkan nama, logo, serta identitas rumah kos Anda sendiri di portal penghuni dan dokumen kontrak sewa digital agar terlihat lebih tepercaya.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-baseline">
-                    <div class="md:col-span-1 text-xs font-mono font-semibold text-stone-400">03</div>
-                    <div class="md:col-span-4">
-                        <h3 class="text-lg font-bold text-stone-900">
-                            Migrasi Data Penuh &amp; Pelatihan Tim Operasional (Done-For-You)
-                        </h3>
-                    </div>
-                    <div class="md:col-span-7">
-                        <p class="text-base text-stone-700 leading-relaxed">
-                            Tim kami membantu memindahkan seluruh data lama Anda hingga tuntas sekaligus melatih penjaga atau admin kos Anda cara mengoperasikan sistem.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-baseline">
-                    <div class="md:col-span-1 text-xs font-mono font-semibold text-stone-400">04</div>
-                    <div class="md:col-span-4">
-                        <h3 class="text-lg font-bold text-stone-900">
-                            Laporan Keuangan Konsolidasi &amp; Audit Operasional
-                        </h3>
-                    </div>
-                    <div class="md:col-span-7">
-                        <p class="text-base text-stone-700 leading-relaxed">
-                            Pantau ringkasan pemasukan, tunggakan, dan performa tingkat hunian dari seluruh properti Anda dalam satu tampilan eksekutif.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-baseline">
-                    <div class="md:col-span-1 text-xs font-mono font-semibold text-stone-400">05</div>
-                    <div class="md:col-span-4">
-                        <h3 class="text-lg font-bold text-stone-900">
-                            Dukungan Teknis Prioritas
-                        </h3>
-                    </div>
-                    <div class="md:col-span-7">
-                        <p class="text-base text-stone-700 leading-relaxed">
-                            Jalur bantuan khusus yang lebih cepat apabila ada kendala teknis, penyesuaian alur kerja, atau kebutuhan operasional mendesak.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TARGET AUDIENCE SECTION (Untuk Siapa Penawaran Ini Paling Tepat?) -->
-        <section class="mt-20">
-            <div class="rounded-2xl bg-stone-100/90 border border-stone-200/90 p-8 sm:p-12">
-                <div class="max-w-3xl">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-stone-500">Kesesuaian Layanan</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-stone-950 tracking-tight mt-2 mb-4">
-                        Untuk Siapa Penawaran Ini Paling Tepat?
-                    </h2>
-                    <p class="text-base sm:text-lg text-stone-700 leading-relaxed">
-                        Paket ini dirancang khusus bagi pemilik kos dengan banyak kamar atau lebih dari satu cabang yang ingin mendelegasikan urusan teknis sepenuhnya, menjaga standar layanan profesional di mata penghuni, dan mempercepat ekspansi bisnis tanpa repot mengurus detail teknis sendiri.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- OFFER & PRICING TABLE SECTION (Exact structure from document table) -->
-        <section id="investasi" class="mt-20">
-            <div class="max-w-2xl mx-auto">
-                <div class="rounded-2xl bg-white border-2 border-stone-900 editorial-shadow overflow-hidden">
-                    <!-- Row 1: Title -->
-                    <div class="px-6 py-5 sm:px-8 sm:py-6 bg-stone-900 text-stone-50 border-b border-stone-800">
-                        <div class="text-xs font-medium text-stone-400 uppercase tracking-wider mb-1">Ringkasan Penawaran</div>
-                        <h3 class="text-lg sm:text-xl font-bold tracking-tight">
-                            Paket Ekspansi &amp; Pendampingan Prioritas — Sistem Informasi Manajemen Rumah Kos
-                        </h3>
-                    </div>
-
-                    <!-- Row 2: Investment & Inclusions -->
-                    <div class="px-6 py-8 sm:px-8 sm:py-10 border-b border-stone-200 bg-white">
-                        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 pb-6 border-b border-stone-100">
-                            <div>
-                                <span class="text-sm font-semibold text-stone-500 uppercase tracking-wide">Investasi</span>
-                                <p class="text-xs text-stone-500 mt-0.5">Paket Ekspansi &amp; Pendampingan Prioritas</p>
+                        <!-- Key checklist -->
+                        <div class="space-y-3 pt-2">
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                </div>
+                                <span class="text-sm font-medium text-slate-700">Pemilik yang menambah unit baru / cabang kos di lokasi berbeda.</span>
                             </div>
-                            <div class="flex items-baseline gap-1.5">
-                                <span class="text-base font-semibold text-stone-500">Rp</span>
-                                <span class="text-4xl sm:text-5xl font-bold tracking-tight text-stone-950">99.000</span>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                </div>
+                                <span class="text-sm font-medium text-slate-700">Pengelola kos yang ingin branding resmi profesional di mata penyewa.</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                </div>
+                                <span class="text-sm font-medium text-slate-700">Admin kos yang ingin migrasi data tanpa kerepotan input manual satu per satu.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Visual Cards Highlight -->
+                    <div class="lg:col-span-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            
+                            <!-- Card 1 -->
+                            <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-brand-500 hover:shadow-md transition-all">
+                                <div class="w-11 h-11 rounded-xl bg-emerald-50 text-brand-700 flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base font-bold text-slate-900 mb-2">Pemilik Multi-Cabang</h3>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Memonitor kinerja tiap gedung dari satu dashboard tanpa campur aduk pembukuan antar properti.
+                                </p>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-brand-500 hover:shadow-md transition-all">
+                                <div class="w-11 h-11 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base font-bold text-slate-900 mb-2">Kustomisasi Branding</h3>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Format kontrak digital &amp; landing page atas nama merek kos Anda sendiri agar terlihat kredibel &amp; eksklusif.
+                                </p>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-brand-500 hover:shadow-md transition-all">
+                                <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 5.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base font-bold text-slate-900 mb-2">Bebas Repot Input Data</h3>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Data riwayat tagihan, penghuni berjalan, dan inventaris kamar dipindahkan tuntas oleh tim teknis.
+                                </p>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-brand-500 hover:shadow-md transition-all">
+                                <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.199l-.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base font-bold text-slate-900 mb-2">Pelatihan Tim Operasional</h3>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Pengelola &amp; admin kos dilatih langsung sehingga sistem berjalan optimal tanpa mengganggu kesibukan pemilik.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FASILITAS UTAMA PAKET EKSPANSI (PROFIT MAXIMIZER) SECTION -->
+        <section id="fasilitas" class="py-20 md:py-28 bg-white border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold uppercase tracking-wider mb-3">
+                        Fasilitas Utama
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                        Fasilitas Utama Paket Ekspansi (Profit Maximizer)
+                    </h2>
+                    <p class="text-base sm:text-lg text-slate-600">
+                        Rincian layanan premium dan manfaat spesifik yang didapatkan oleh pengelola kos untuk meningkatkan efisiensi dan profitabilitas.
+                    </p>
+                </div>
+
+                <!-- 4 Feature Cards with exact PDF text -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    
+                    <!-- 1. Pengelolaan Multi-Cabang -->
+                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/90 hover:border-brand-500 hover:shadow-premium transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 text-brand-600 flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-white text-slate-500 border border-slate-200">01 / LAYANAN PREMIUM</span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-700 transition-colors">
+                                Pengelolaan Multi-Cabang
+                            </h3>
+
+                            <div class="mb-4">
+                                <span class="text-xs font-semibold uppercase tracking-wider text-brand-700 block mb-1">Manfaat untuk Pengelola Kos:</span>
+                                <p class="text-slate-700 text-base leading-relaxed">
+                                    Kelola beberapa lokasi/unit rumah kos sekaligus dalam satu akun terpusat dengan laporan keuangan dan statistik terpisah maupun gabungan.
+                                </p>
                             </div>
                         </div>
 
-                        <div class="mt-6">
-                            <p class="text-sm font-medium text-stone-700 leading-relaxed">
-                                Penambahan properti multi-cabang &bull; Custom branding &bull; Migrasi &amp; pelatihan tim &bull; Dukungan prioritas
+                        <div class="pt-5 border-t border-slate-200 flex items-center gap-2 text-xs font-semibold text-slate-500">
+                            <svg class="w-4 h-4 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Laporan keuangan per-cabang &amp; konsolidasi otomatis</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Kustomisasi Identitas Kos -->
+                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/90 hover:border-brand-500 hover:shadow-premium transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 text-brand-600 flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-white text-slate-500 border border-slate-200">02 / LAYANAN PREMIUM</span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-700 transition-colors">
+                                Kustomisasi Identitas Kos
+                            </h3>
+
+                            <div class="mb-4">
+                                <span class="text-xs font-semibold uppercase tracking-wider text-brand-700 block mb-1">Manfaat untuk Pengelola Kos:</span>
+                                <p class="text-slate-700 text-base leading-relaxed">
+                                    Penyesuaian tampilan profil kos, halaman landing page, dan format kontrak sewa digital sesuai nama dan identitas resmi bisnis kos Anda.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-5 border-t border-slate-200 flex items-center gap-2 text-xs font-semibold text-slate-500">
+                            <svg class="w-4 h-4 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Branding personal: Nama kos, logo &amp; klausul kontrak digital</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Layanan Migrasi Data Penuh -->
+                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/90 hover:border-brand-500 hover:shadow-premium transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 text-brand-600 flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-white text-slate-500 border border-slate-200">03 / LAYANAN PREMIUM</span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-700 transition-colors">
+                                Layanan Migrasi Data Penuh
+                            </h3>
+
+                            <div class="mb-4">
+                                <span class="text-xs font-semibold uppercase tracking-wider text-brand-700 block mb-1">Manfaat untuk Pengelola Kos:</span>
+                                <p class="text-slate-700 text-base leading-relaxed">
+                                    Tim teknis membantu memindahkan seluruh data kamar, data penghuni aktif, serta catatan tagihan lama ke dalam sistem tanpa repot input manual.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-5 border-t border-slate-200 flex items-center gap-2 text-xs font-semibold text-slate-500">
+                            <svg class="w-4 h-4 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>100% dibantu tim teknis (Excel/Catatan fisik ke sistem digital)</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Pendampingan & Dukungan Prioritas -->
+                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/90 hover:border-brand-500 hover:shadow-premium transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200 text-brand-600 flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.199l-.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-white text-slate-500 border border-slate-200">04 / LAYANAN PREMIUM</span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-700 transition-colors">
+                                Pendampingan &amp; Dukungan Prioritas
+                            </h3>
+
+                            <div class="mb-4">
+                                <span class="text-xs font-semibold uppercase tracking-wider text-brand-700 block mb-1">Manfaat untuk Pengelola Kos:</span>
+                                <p class="text-slate-700 text-base leading-relaxed">
+                                    Sesi konsultasi operasional, pelatihan Admin Kos, serta jalur bantuan teknis prioritas untuk memastikan sistem berjalan lancar.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-5 border-t border-slate-200 flex items-center gap-2 text-xs font-semibold text-slate-500">
+                            <svg class="w-4 h-4 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Fast-response assistance &amp; pendampingan intensif</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Structured Table view mirroring the PDF Document -->
+                <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+                    <div class="p-6 bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-brand-400">Tabel Rangkuman</span>
+                            <h3 class="text-lg font-bold">Matriks Layanan &amp; Manfaat Operasional</h3>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs bg-white/10 text-slate-200 px-3 py-1 rounded-full border border-white/15">
+                            <svg class="w-3.5 h-3.5 text-brand-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Termasuk Semua Fitur Premium
+                        </span>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-slate-200 text-xs font-bold text-slate-600 uppercase tracking-wider">
+                                    <th class="py-4 px-6 w-1/3">Layanan Premium</th>
+                                    <th class="py-4 px-6 w-2/3">Manfaat untuk Pengelola Kos</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-sm">
+                                <tr class="hover:bg-slate-50/70 transition-colors">
+                                    <td class="py-4 px-6 font-bold text-slate-900 align-top">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-brand-600"></span>
+                                            <span>Pengelolaan Multi-Cabang</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-700 leading-relaxed">
+                                        Kelola beberapa lokasi/unit rumah kos sekaligus dalam satu akun terpusat dengan laporan keuangan dan statistik terpisah maupun gabungan.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/70 transition-colors">
+                                    <td class="py-4 px-6 font-bold text-slate-900 align-top">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-brand-600"></span>
+                                            <span>Kustomisasi Identitas Kos</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-700 leading-relaxed">
+                                        Penyesuaian tampilan profil kos, halaman landing page, dan format kontrak sewa digital sesuai nama dan identitas resmi bisnis kos Anda.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/70 transition-colors">
+                                    <td class="py-4 px-6 font-bold text-slate-900 align-top">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-brand-600"></span>
+                                            <span>Layanan Migrasi Data Penuh</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-700 leading-relaxed">
+                                        Tim teknis membantu memindahkan seluruh data kamar, data penghuni aktif, serta catatan tagihan lama ke dalam sistem tanpa repot input manual.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/70 transition-colors">
+                                    <td class="py-4 px-6 font-bold text-slate-900 align-top">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2 h-2 rounded-full bg-brand-600"></span>
+                                            <span>Pendampingan &amp; Dukungan Prioritas</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-6 text-slate-700 leading-relaxed">
+                                        Sesi konsultasi operasional, pelatihan Admin Kos, serta jalur bantuan teknis prioritas untuk memastikan sistem berjalan lancar.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ALUR AKTIVASI PAKET EKSPANSI SECTION (Exact 3 Steps from PDF) -->
+        <section id="alur-aktivasi" class="py-20 md:py-28 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white border border-slate-200 text-brand-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
+                        Langkah Mudah &amp; Terarah
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                        Alur Aktivasi Paket Ekspansi
+                    </h2>
+                    <p class="text-base sm:text-lg text-slate-600">
+                        Didampingi step-by-step oleh tim teknis kami dari awal hingga sistem beroperasi penuh tanpa jeda bisnis.
+                    </p>
+                </div>
+
+                <!-- 3 Steps Grid / Stepper -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                    
+                    <!-- Step 1 -->
+                    <div class="relative bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 text-brand-700 text-lg font-extrabold flex items-center justify-center">
+                                1
+                            </span>
+                            <span class="text-xs uppercase tracking-wider font-bold text-slate-400">Tahap 01</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">
+                            Konsultasi &amp; Pengumpulan Data
+                        </h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Pengelola mengirimkan daftar cabang kos, identitas branding, serta file data kamar dan penghuni yang ingin dimigrasikan.
+                        </p>
+                        
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-medium text-slate-500">
+                            <svg class="w-4 h-4 text-brand-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            <span>Daftar Cabang, Branding &amp; Data Penghuni</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-200 text-brand-700 text-lg font-extrabold flex items-center justify-center">
+                                2
+                            </span>
+                            <span class="text-xs uppercase tracking-wider font-bold text-slate-400">Tahap 02</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">
+                            Setup &amp; Kustomisasi oleh Tim Teknis
+                        </h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Penyesuaian tampilan, konfigurasi paket cabang, dan proses migrasi data ke akun Admin Kos.
+                        </p>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-medium text-slate-500">
+                            <svg class="w-4 h-4 text-brand-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.15.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span>Konfigurasi Cabang &amp; Input Data Otomatis</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="w-12 h-12 rounded-2xl bg-brand-600 text-white text-lg font-extrabold flex items-center justify-center shadow-md shadow-brand-600/30">
+                                3
+                            </span>
+                            <span class="text-xs uppercase tracking-wider font-bold text-brand-700">Tahap 03 • Siap Pakai</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">
+                            Serah Terima &amp; Pendampingan
+                        </h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Pengecekan bersama seluruh fitur (booking, kontrak digital, tagihan, pengaduan, dan laporan keuangan) hingga siap beroperasi penuh.
+                        </p>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-medium text-slate-500">
+                            <svg class="w-4 h-4 text-brand-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span>Verifikasi 100% Fitur &amp; Siap Live</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- OPSI PENGEMBANGAN TAMBAHAN (UPSELL, DOWNSELL, CROSS-SELL) -->
+        <section id="opsi-pengembangan" class="py-20 md:py-28 bg-white border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold uppercase tracking-wider mb-3">
+                        Fleksibilitas Skema
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                        Opsi Pengembangan Tambahan
+                    </h2>
+                    
+                    <!-- Exact PDF paragraph -->
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                        Kami juga menyediakan fleksibilitas skema pengembangan pelengkap melalui opsi <strong class="text-slate-900">Upsell, Downsell, maupun Cross-sell</strong> yang disesuaikan dengan kebutuhan spesifik operasional bisnis kos Anda. Tim kami siap merancang penyesuaian fitur tambahan agar selaras dengan arah pertumbuhan investasi properti Anda.
+                    </p>
+                </div>
+
+                <!-- 3 Modular Option Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <!-- Upsell -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-emerald-100/70 text-emerald-800 text-xs font-bold uppercase mb-4">
+                                Skema Upsell
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Upgrade Kapasitas &amp; Otomatisasi Penuh</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                Solusi tingkat lanjut untuk otomatisasi pengingat tagihan WhatsApp gateway, integrasi payment gateway otomatis, serta penambahan kuota kamar berskala besar.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200/80 text-xs font-semibold text-brand-700">
+                            Cocok untuk ekspansi properti volume tinggi &rarr;
+                        </div>
+                    </div>
+
+                    <!-- Cross-sell -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-teal-100/70 text-teal-800 text-xs font-bold uppercase mb-4">
+                                Skema Cross-Sell
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Layanan Pelengkap Operasional &amp; Promosi</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                Paket pendukung mencakup pembuatan materi promosi digital, standarisasi SOP penjaga kos, dan aset kit pemasaran online untuk menarik calon penghuni baru.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200/80 text-xs font-semibold text-teal-700">
+                            Tingkatkan occupancy rate &amp; branding kos &rarr;
+                        </div>
+                    </div>
+
+                    <!-- Downsell -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-200 text-slate-800 text-xs font-bold uppercase mb-4">
+                                Skema Downsell
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Paket Hemat (Lite) Pengelolaan Kos</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                Pilihan ekonomis bagi pengelola yang hanya membutuhkan penambahan 1 cabang mandiri atau bantuan migrasi data esensial dengan pendampingan mandiri.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200/80 text-xs font-semibold text-slate-700">
+                            Solusi fleksibel sesuai anggaran operasional &rarr;
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PRICING & OFFER SUMMARY (INVESTASI) -->
+        <section id="investasi" class="py-20 md:py-28 bg-gradient-to-b from-slate-900 to-navy-950 text-white relative overflow-hidden">
+            <!-- Glow background -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 border border-brand-400/30 text-brand-300 text-xs font-bold uppercase tracking-wider mb-3">
+                        Penawaran Terpadu
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-3">
+                        Aktivasi Paket Ekspansi Sekarang
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base">
+                        Kembangkan portofolio kos Anda secara profesional dengan pengawalan teknis prioritas dari tim KosinAja.
+                    </p>
+                </div>
+
+                <!-- Main Investment Card -->
+                <div class="rounded-3xl bg-slate-800/90 border border-slate-700/80 shadow-2xl overflow-hidden backdrop-blur-xl">
+                    
+                    <div class="p-6 sm:p-10 border-b border-slate-700/80">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-brand-400 block mb-1">
+                                    PROFIT MAXIMIZER TIER
+                                </span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white">
+                                    Paket Ekspansi &amp; Pendampingan Prioritas Rumah Kos
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-300 mt-1">
+                                    Sistem Informasi Manajemen Rumah Kos (KosinAja)
+                                </p>
+                            </div>
+
+                            <div class="sm:text-right shrink-0">
+                                <span class="text-xs uppercase font-semibold text-slate-400 block">Biaya Investasi</span>
+                                <div class="flex items-baseline sm:justify-end gap-1.5 mt-0.5">
+                                    <span class="text-base text-brand-400 font-bold">Rp</span>
+                                    <span class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">99.000</span>
+                                </div>
+                                <span class="text-[11px] text-slate-400 block mt-0.5">Investasi terjangkau untuk ekspansi penuh</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features checklist inside card -->
+                    <div class="p-6 sm:p-10 bg-slate-850">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-6">
+                            Layanan yang Anda Dapatkan Lengkap:
+                        </h4>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mb-8">
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                </div>
+                                <span class="text-slate-200"><strong>Pengelolaan Multi-Cabang</strong> (sentralisasi akun terpusat)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                </div>
+                                <span class="text-slate-200"><strong>Kustomisasi Identitas Kos</strong> (landing page &amp; kontrak digital)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                </div>
+                                <span class="text-slate-200"><strong>Migrasi Data Penuh</strong> (kamar, penghuni &amp; tagihan lama)</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                                </div>
+                                <span class="text-slate-200"><strong>Pendampingan Prioritas</strong> &amp; Pelatihan Admin Kos</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA Button on Card -->
+                        <div class="space-y-3">
+                            <a href="https://wa.me/6285871444639?text=Halo%20Tim%20KosinAja%2C%20saya%20ingin%20Upgrade%20ke%20Paket%20Ekspansi%20%26%20Pendampingan%20Prioritas%20Rumah%20Kos%20(Rp%2099.000)." 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="w-full py-4 px-6 rounded-2xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-base flex items-center justify-center gap-3 shadow-lg shadow-brand-600/30 active:scale-98 transition-all">
+                                <span>Aktivasi Paket Ekspansi &amp; Pendampingan Prioritas</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                                </svg>
+                            </a>
+                            <p class="text-center text-xs text-slate-400">
+                                Terhubung langsung via WhatsApp Resmi Tim Teknis KosinAja (+62 858-7144-4639)
                             </p>
                         </div>
                     </div>
 
-                    <!-- Row 3: Action Button -->
-                    <div class="px-6 py-6 sm:px-8 sm:py-6 bg-stone-50">
-                        <a href="https://wa.me/6285871444639?text=Halo%2C%20saya%20ingin%20Upgrade%20ke%20Paket%20Ekspansi%20%26%20Pendampingan%20Prioritas%20%E2%80%94%20Sistem%20Informasi%20Manajemen%20Rumah%20Kos%20(Rp%2099.000)." target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 rounded-xl bg-forest-600 hover:bg-forest-700 active:bg-forest-800 text-white font-semibold text-base transition-colors flex items-center justify-center gap-2 shadow-sm">
-                            <span>Upgrade ke Paket Ekspansi &amp; Prioritas Sekarang</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </a>
-                    </div>
                 </div>
+
+            </div>
+        </section>
+
+
+        <!-- FAQ SECTION -->
+        <section class="py-18 md:py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-700 block mb-2">FAQ</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        Pertanyaan Seputar Paket Ekspansi
+                    </h2>
+                </div>
+
+                <div class="space-y-4">
+                    
+                    <details class="group p-5 rounded-2xl bg-slate-50 border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900 flex items-center justify-between list-none">
+                            <span>Berapa cabang kos yang bisa diintegrasikan dalam paket ini?</span>
+                            <span class="text-slate-400 group-open:rotate-180 transition-transform">&darr;</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                            Paket ekspansi dapat dikonfigurasi fleksibel mulai dari penambahan cabang kedua hingga portofolio multi-cabang lanjutan. Tim kami akan menyesuaikan kuota cabang sesuai kebutuhan properti Anda.
+                        </p>
+                    </details>
+
+                    <details class="group p-5 rounded-2xl bg-slate-50 border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900 flex items-center justify-between list-none">
+                            <span>Apakah data penghuni lama yang masih dalam catatan kertas/Excel bisa dimigrasikan?</span>
+                            <span class="text-slate-400 group-open:rotate-180 transition-transform">&darr;</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                            Ya, benar. Layanan migrasi data penuh kami bersifat Done-For-You. Anda cukup menyerahkan rekapan data (Excel, spreadsheet, maupun foto catatan tagihan), tim teknis kami yang akan memasukkannya hingga rapi ke sistem.
+                        </p>
+                    </details>
+
+                    <details class="group p-5 rounded-2xl bg-slate-50 border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900 flex items-center justify-between list-none">
+                            <span>Bagaimana bentuk kustomisasi identitas kos?</span>
+                            <span class="text-slate-400 group-open:rotate-180 transition-transform">&darr;</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                            Tampilan profil kos, landing page penyewa, serta template kontrak sewa digital akan menampilkan nama, logo, dan identitas resmi bisnis kos Anda tanpa mencantumkan merek generik pihak ketiga.
+                        </p>
+                    </details>
+
+                    <details class="group p-5 rounded-2xl bg-slate-50 border border-slate-200 cursor-pointer">
+                        <summary class="font-bold text-slate-900 flex items-center justify-between list-none">
+                            <span>Apakah ada pelatihan untuk admin atau penjaga kos kami?</span>
+                            <span class="text-slate-400 group-open:rotate-180 transition-transform">&darr;</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                            Tentu saja. Sesi konsultasi operasional dan pelatihan staf/admin kos sudah termasuk dalam paket ini agar operasional harian berjalan lancar dan pemilik kos tidak perlu melatih dari nol.
+                        </p>
+                    </details>
+
+                </div>
+
             </div>
         </section>
 
     </main>
 
-    <!-- Minimal Footer -->
-    <footer class="border-t border-stone-200 bg-stone-100/60 py-10">
-        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
-            <span class="font-medium text-stone-700">Paket Ekspansi &amp; Pendampingan Prioritas — Sistem Informasi Manajemen Rumah Kos</span>
-            <span>Penambahan properti multi-cabang &bull; Custom branding &bull; Migrasi &amp; pelatihan tim &bull; Dukungan prioritas</span>
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold">
+                        K
+                    </div>
+                    <div>
+                        <span class="font-bold text-white text-base">KosinAja</span>
+                        <span class="text-xs text-slate-400 block">Sistem Informasi Manajemen Rumah Kos</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-medium">
+                    <a href="#untuk-siapa" class="hover:text-white transition-colors">Untuk Siapa</a>
+                    <a href="#fasilitas" class="hover:text-white transition-colors">Fasilitas Utama</a>
+                    <a href="#alur-aktivasi" class="hover:text-white transition-colors">Alur Aktivasi</a>
+                    <a href="#opsi-pengembangan" class="hover:text-white transition-colors">Opsi Pengembangan</a>
+                    <a href="#investasi" class="hover:text-white transition-colors">Investasi</a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                <p>&copy; 2026 KosinAja &bull; Paket Ekspansi &amp; Pendampingan Prioritas Rumah Kos (Profit Maximizer).</p>
+                <p class="text-slate-300">Dikelola secara profesional oleh Tim Inovindo</p>
+            </div>
         </div>
     </footer>
 
